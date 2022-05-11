@@ -8,9 +8,8 @@ react-router-dom ======> Navigate between pages
 #
 react-helmet =====>  To rename the page
 #
-react-tooltip ======> Posts for when you stand on things like fields./ 
+react-tooltip ======> Posts for when you stand on things like fields./ material/ui
 #
-material/ui
 bootstrap ======> for responsive 
 
 
