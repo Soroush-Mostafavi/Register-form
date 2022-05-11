@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Helmet from "react-helmet";
-import Tooltip from '@mui/material/Tooltip';
+import Tooltip from "@mui/material/Tooltip";
 import SimpleReactValidator from "simple-react-validator";
-const SignUp = ({history}) => {
+const SignUp = ({ history }) => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -26,16 +26,14 @@ const SignUp = ({history}) => {
     setLastname("");
     setEmail("");
     setPassword("");
-};
-//////////////////////////////////////////////////////////send info to server
-
+  };
+  //////////////////////////////////////////////////////////send info to server
 
   return (
     <section className="text-center">
-    
-        <Helmet>
-          <title>Soroush</title>
-        </Helmet>
+      <Helmet>
+        <title>Soroush</title>
+      </Helmet>
       {/* <!-- Background image --> */}
       <div
         className="p-5 bg-image backimg"
@@ -55,26 +53,28 @@ const SignUp = ({history}) => {
       >
         <div className="card-body py-5 px-md-5 main-img">
           <div className="row d-flex justify-content-center">
-          <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Home</NavLink>
             <div className="col-lg-8">
               <h2 className="fw-bold mb-5">Sign up now</h2>
-             
+
               <form onSubmit={reset}>
                 {/* <!-- 2 column grid layout with text inputs for the first and last names --> */}
                 <div className="row">
                   <div className="col-md-6 mb-4">
                     <div className="form-outline">
-                    <Tooltip title='your name is beautiful'><input
-                        type="text"
-                        name="firstname"
-                        id="form3Example1"
-                        className="form-control"
-                        value={firstname}
-                        onChange={(e) => {
-                          setFirstname(e.target.value);
-                          validator.current.showMessageFor("firstname");
-                        }}
-                      /></Tooltip> {" "}
+                      <Tooltip title="your name is beautiful">
+                        <input
+                          type="text"
+                          name="firstname"
+                          id="form3Example1"
+                          className="form-control"
+                          value={firstname}
+                          onChange={(e) => {
+                            setFirstname(e.target.value);
+                            validator.current.showMessageFor("firstname");
+                          }}
+                        />
+                      </Tooltip>{" "}
                       {validator.current.message(
                         "firstname",
                         firstname,
@@ -112,17 +112,19 @@ const SignUp = ({history}) => {
 
                 {/* <!-- Email input --> */}
                 <div className="form-outline mb-4">
-                  <Tooltip title="your email is so funny"><input
-                    type="text"
-                    name="email"
-                    id="form3Example3"
-                    className="form-control"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                      validator.current.showMessageFor("email");
-                    }}
-                  /></Tooltip>
+                  <Tooltip title="your email is so funny">
+                    <input
+                      type="text"
+                      name="email"
+                      id="form3Example3"
+                      className="form-control"
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        validator.current.showMessageFor("email");
+                      }}
+                    />
+                  </Tooltip>
                   {validator.current.message("email", email, "required|email")}
                   <label className="form-label" for="form3Example3">
                     Email address
@@ -131,17 +133,19 @@ const SignUp = ({history}) => {
 
                 {/* <!-- Password input --> */}
                 <div className="form-outline mb-4">
-                <Tooltip title='your pass should long beacuse short pass will be hacked by hacker'><input
-                    type="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                      validator.current.showMessageFor("password");
-                    }}
-                    id="form3Example4"
-                    className="form-control"
-                  /></Tooltip>
+                  <Tooltip title="your pass should long beacuse short pass will be hacked by hacker">
+                    <input
+                      type="password"
+                      name="password"
+                      value={password}
+                      onChange={(e) => {
+                        setPassword(e.target.value);
+                        validator.current.showMessageFor("password");
+                      }}
+                      id="form3Example4"
+                      className="form-control"
+                    />
+                  </Tooltip>
                   {validator.current.message(
                     "password",
                     password,
@@ -159,7 +163,6 @@ const SignUp = ({history}) => {
                     type="checkbox"
                     value=""
                     id="form2Example33"
-                    
                   />
                   <label className="form-check-label" for="form2Example33">
                     Subscribe to our newsletter
